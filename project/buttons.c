@@ -82,4 +82,11 @@ void switch_interrupt_handler(){// Handler for switches
   top_3 = (p2val & TOP_3) ? 0 : 1;/*---------*/
   top_4 = (p2val & TOP_4) ? 0 : 1;/*---------*/
 
-}
+  if(top_3){
+    dim();
+  }
+  if(top_4){
+    led_state(0,0);
+    binary_count();
+  }
+}//end switch_interrupt_handler
